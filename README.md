@@ -43,45 +43,24 @@ graph TD
     end
 ```
 
-### ASCII Workflow View
-```
-                    +---------------------------------+
-                    |     Uploaded Research Paper     |
-                    |         (PDF or Text)           |
-                    +----------------+----------------+
-                                     |
-                                     v
-                    +----------------+----------------+
-                    |     PDF & Text Parser Engine    |
-                    +----------------+----------------+
-                                     |
-                                     v
-                    +----------------+----------------+
-                    |           AGENT 1               |
-                    | Methodology & Claim Inspector   |
-                    |        (The Skeptic)            |
-                    +----------------+----------------+
-                                     |
-                                     v
-                    +----------------+----------------+
-                    |           AGENT 2               |
-                    |   Data & Statistical Auditor    |
-                    |         (The Critic)            |
-                    +----------------+----------------+
-                                     |
-                                     v
-                    +----------------+----------------+
-                    |           AGENT 3               |
-                    |   Lead Arbiter & Consensus      |
-                    |         Synthesizer             |
-                    +----------------+----------------+
-                                     |
-                                     v
-                    +----------------+----------------+
-                    |   Streamlit v2.0 Dashboard      |
-                    | Radar | Trace | Matrix | Dossier|
-                    +---------------------------------+
-```
+---
+
+## 📸 Visual Dashboard & Live Review Walkthrough
+
+<div align="center">
+  <h3>⚡ Real-Time Reproducibility Audit & 5-Dimension Radar</h3>
+  <img src="https://raw.githubusercontent.com/fokrulanthro16-eng/MetaReviewer-AI/main/docs/images/dashboard_radar.png" alt="MetaReviewer Dashboard" width="95%"/>
+</div>
+
+<br/>
+
+| 🔍 Multi-Agent Debate Trace | 📋 Claim Verification Grid |
+| :---: | :---: |
+| <img src="https://raw.githubusercontent.com/fokrulanthro16-eng/MetaReviewer-AI/main/docs/images/debate_trace.png" width="100%"/> | <img src="https://raw.githubusercontent.com/fokrulanthro16-eng/MetaReviewer-AI/main/docs/images/claim_matrix.png" width="100%"/> |
+
+| 🗺️ 5-Step Author Action Roadmap | 📄 One-Click Exportable Dossier |
+| :---: | :---: |
+| <img src="https://raw.githubusercontent.com/fokrulanthro16-eng/MetaReviewer-AI/main/docs/images/author_roadmap.png" width="100%"/> | <img src="https://raw.githubusercontent.com/fokrulanthro16-eng/MetaReviewer-AI/main/docs/images/dashboard_radar.png" width="100%"/> |
 
 ---
 
@@ -125,11 +104,14 @@ MetaReviewer-AI/
 ├── utils/
 │   ├── pdf_parser.py             # PDF text extraction with layout preserving fallbacks
 │   └── json_helper.py            # Robust JSON cleaner & heuristic regex fallback parser
+├── docs/images/                  # UI Visual Walkthrough & Radar Screenshots
+│   ├── dashboard_radar.png
+│   ├── debate_trace.png
+│   ├── claim_matrix.png
+│   └── author_roadmap.png
 ├── sample_papers/
 │   ├── flawed_paper.txt          # Test paper with statistical & sample size defects (N=15)
 │   └── rigorous_paper.txt        # Test paper demonstrating high scientific rigor
-├── assets/                       # UI Diagrams & Screenshot references
-│   └── README.md
 ├── workflow.py                   # LangGraph state graph orchestrator & compiler
 ├── app.py                        # Streamlit v2.0 Interactive Review Dashboard
 ├── requirements.txt              # Dependencies (langgraph, google-genai, streamlit, plotly)
